@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   },
   description: {
     fontSize: 14,
-    color: '#666',
+    color: '#black',
     marginTop: 5,
   },
 });
