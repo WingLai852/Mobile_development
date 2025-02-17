@@ -1,6 +1,8 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import ProductCard from './components/ProductCard';
+
 
 
 export default function App() {
@@ -14,10 +16,16 @@ export default function App() {
 
       <View style={styles.Productcontainer}>
         <ProductCard
-        img={require('./assets/snowboard1.webp')}
+        img={require('./assets/snowboard1.jpg')}
         name="Burton Custom Snowboard"
         description="Burton Custom Snowboard 2021"
         />
+        <ProductCard
+        img={require('./assets/snowboard1.jpg')}
+        name="Burton Custom Snowboard"
+        description="Burton Custom Snowboard 2021"
+        />
+        
         </View>
       </ScrollView>
   );
@@ -47,3 +55,4 @@ const styles = StyleSheet.create({
     color: '#666',
   },
 });
+
