@@ -25,6 +25,11 @@ export default function App() {
         name="Burton Custom Snowboard"
         description="Burton Custom Snowboard 2021"
         />
+         <ProductCard
+        img={require('./assets/snowboard1.jpg')}
+        name="Burton Custom Snowboard"
+        description="Burton Custom Snowboard 2021"
+        />
         
         </View>
       </ScrollView>

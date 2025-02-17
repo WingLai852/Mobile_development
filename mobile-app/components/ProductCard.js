@@ -20,7 +20,7 @@ const ProductCard = ({ image, name, description }) => {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: '#fff',
+    backgroundColor: '#ffff',
     borderRadius: 8,
     padding: 10,
     marginBottom: 20,
@@ -30,9 +30,8 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   image: {
-    width: '100%',
-    height: 50,
-    borderRadius: 8,
+    width: '50%',
+    height: 100,
   },
   infoContainer: {
     padding: 10,
