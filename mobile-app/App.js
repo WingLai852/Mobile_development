@@ -5,11 +5,20 @@ import { StyleSheet, Text, View, ScrollView } from 'react-native';
 
 export default function App() {
   return (
+    //header section
     <ScrollView style={styles.container}>
     <View style={styles.headerContainer}>
         <Text style={styles.headerTitle}>Welkom bij snowboard shop</Text>
         <Text style={styles.headerSubtitle}>Ontdek onze nieuwste producten</Text>
       </View>
+
+      <View style={styles.Productcontainer}>
+        <ProductCard
+        img={require('./assets/snowboard1.webp')}
+        name="Burton Custom Snowboard"
+        description="Burton Custom Snowboard 2021"
+        />
+        </View>
       </ScrollView>
   );
   
