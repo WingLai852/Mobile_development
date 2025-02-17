@@ -18,17 +18,17 @@ export default function App() {
         <ProductCard
         img={require('./assets/snowboard1.jpg')}
         name="Burton Custom Snowboard"
-        description="Burton Custom Snowboard 2021"
+        description="500 euro"
         />
         <ProductCard
         img={require('./assets/snowboard1.jpg')}
         name="Burton Custom Snowboard"
-        description="Burton Custom Snowboard 2021"
+        description="500 euro"
         />
          <ProductCard
         img={require('./assets/snowboard1.jpg')}
         name="Burton Custom Snowboard"
-        description="Burton Custom Snowboard 2021"
+        description="500 euro"
         />
         
         </View>

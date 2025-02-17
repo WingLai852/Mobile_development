@@ -30,8 +30,10 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   image: {
-    width: '50%',
+    width: '100%',
     height: 100,
+    borderRadius: 8,
+    
   },
   infoContainer: {
     padding: 10,
@@ -42,9 +44,10 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   description: {
-    fontSize: 14,
+    fontSize: 20,
     color: '#black',
     marginTop: 5,
+    
   },
 });
 
