@@ -1,10 +1,7 @@
 import React from 'react';
 import { View, Text, Image, Button, StyleSheet } from 'react-native';
 
-const ProductCard = ({ image, name, description }) => {
-  const handlePress = () => {
-    alert(`Je hebt ${name} gekozen!`);
-  };
+const ProductCard = ({ image, name, description, navigation }) => {
 
   return (
     <View style={styles.card}>
@@ -12,7 +9,7 @@ const ProductCard = ({ image, name, description }) => {
       <View style={styles.infoContainer}>
         <Text style={styles.name}>{name}</Text>
         <Text style={styles.description}>{description}</Text>
-        <Button title="Koop nu" onPress={handlePress} />
+        <Button title="Koop nu" onPress={()=> navigation.navigate("HomeScreen")} />
       </View>
     </View>
   );
