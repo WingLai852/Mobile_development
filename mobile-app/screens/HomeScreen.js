@@ -16,7 +16,7 @@ const HomeScreen = ({ navigation }) => {
         <ProductCard
           img={require('../assets/snowboard1.jpg')}
           name="Burton Custom Snowboard"
-          description="500 euro"
+          description="299,99 euro"
           navigation={navigation}
         />
         <ProductCard
