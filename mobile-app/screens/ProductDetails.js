@@ -1,20 +1,31 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { ScrollView, View, Text, StyleSheet, Image, TouchableOpacity, } from 'react-native';
 
-const ProductDetails = () => {
+const SnowBoardProductDetails = ({Navigation}) => {
   return (
-    <View style={styles.container}>
-      <Text>Product Details Screen</Text>
-    </View>
+    <ScrollView style={styles.container}>
+      <Image
+      source={require('../assets/snowboard1.jpg')}
+      style={styles.image}
+      resizeMode='cover'
+      />
+  <View style={styles.detailContainer}>
+        <Text style={styles.title}>Super Snowboard</Text>
+        <Text style={styles.price}>€299,99</Text>
+        <Text style={styles.description}>
+          Dit snowboard is geschikt voor zowel beginnende snowboarders en gevorderden.  
+        </Text>
+      </View>
+
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+
   },
 });
 
-export default ProductDetails;
+export default SnowBoardProductDetails;

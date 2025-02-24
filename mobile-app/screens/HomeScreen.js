@@ -10,12 +10,7 @@ const HomeScreen = ({ navigation }) => {
         <Text style={styles.headerSubtitle}>Ontdek onze nieuwste producten</Text>
       </View>
 
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate('Details')}
-      >
-        <Text>Product Details</Text>
-      </TouchableOpacity>
+     
 
       <View style={styles.Productcontainer}>
         <ProductCard
@@ -30,6 +25,13 @@ const HomeScreen = ({ navigation }) => {
           description="500 euro"
           navigation={navigation}
         />
+        <ProductCard
+          img={require('../assets/snowboard1.jpg')}
+          name="Burton Custom Snowboard"
+          description="500 euro"
+          navigation={navigation}
+        />
+
         <ProductCard
           img={require('../assets/snowboard1.jpg')}
           name="Burton Custom Snowboard"
