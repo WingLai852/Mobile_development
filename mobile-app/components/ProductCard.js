@@ -9,7 +9,7 @@ const ProductCard = ({ image, name, description, navigation }) => {
       <View style={styles.infoContainer}>
         <Text style={styles.name}>{name}</Text>
         <Text style={styles.description}>{description}</Text>
-        <Button title="Koop nu" onPress={()=> navigation.navigate("HomeScreen")} />
+        <Button title="Bekijk Product" onPress={()=> navigation.navigate("Details")} />
       </View>
     </View>
   );
