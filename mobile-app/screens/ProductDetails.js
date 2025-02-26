@@ -14,9 +14,9 @@ const SnowBoardProductDetails = ({Navigation}) => {
       <View style={styles.overlay}>
           <Text style={styles.title}>Rocky's Snowboard</Text>
           
-          {/* Productafbeelding (optioneel) */}
+          
           <Image 
-            source={require('../assets/SnowBoardbg.png')} // Vervang door je eigen snowboardafbeelding
+            source={require('../assets/SnowBoardbg.png')} 
             style={styles.snowboardImage}
             resizeMode="contain"
           />
