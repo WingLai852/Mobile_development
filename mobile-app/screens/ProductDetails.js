@@ -1,36 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ScrollView, View, Text, StyleSheet, Image, TouchableOpacity, ImageBackground, } from 'react-native';
 
-const SnowBoardProductDetails = ({Navigation}) => {
-  return (
 
+const SnowBoardProductDetails = ({ route }) => {
+  const { name, description, price } = route.params;
+  const [quantity, setQuantity] = useState(1);
+
+  const increaseQuantity = () => {
+    setQuantity(quantity + 1);
+  };
+  const decreaseQuantity = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
+
+
+  return (
     <ImageBackground
-    source={require('../assets/snow.jpg')}
-    style={styles.productImage}
-    resizeMode='cover'
-    >  
-    <ScrollView style={styles.container}>
-      
-      <View style={styles.overlay}>
-          <Text style={styles.title}>Rocky's Snowboard</Text>
-          
-          
-          <Image 
-            source={require('../assets/SnowBoardbg.png')} 
+      source={require('../assets/snow.jpg')}
+      style={styles.productImage}
+      resizeMode='cover'
+    >
+      <ScrollView style={styles.container}>
+        <View style={styles.overlay}>
+          <Text style={styles.name}>{name}</Text>
+          <Text style={styles.description}>{description}</Text>
+          <Text style={styles.price}>{Number(price) * quantity}</Text>
+          <Image
+            source={require('../assets/SnowBoardbg.png')}
             style={styles.snowboardImage}
             resizeMode="contain"
           />
-          
-          <Text style={styles.price}>€299,99</Text>
-          <Text style={styles.description}>
-         Snowboard perfect voor zowel beginners als gevorderden.
-          </Text>
-          
+          <Text style={styles.quantity}>Quantity: {quantity}</Text>
+          <TouchableOpacity style={styles.button} onPress={increaseQuantity}>
+            <Text style={styles.button2}>Increase Quantity</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.button} onPress={decreaseQuantity}>
+            <Text style={styles.button2}>Decrease Quantity</Text>
+          </TouchableOpacity>
           <TouchableOpacity style={styles.button} onPress={() => console.log('Koop nu!')}>
             <Text style={styles.buttonText}>Koop Nu</Text>
           </TouchableOpacity>
         </View>
-    </ScrollView>
+      </ScrollView>
     </ImageBackground>
   );
 };
@@ -59,7 +73,7 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   
-  title: {
+  name: {
     fontSize: 28,
     color: '#fff',
     fontWeight: 'bold',
@@ -93,6 +107,11 @@ const styles = StyleSheet.create({
   buttonText: {
     color: '#fff',
     fontSize: 18,
+    fontWeight: 'bold',
+  },
+  button2: {
+    color: '#fff',
+    fontSize: 15,
     fontWeight: 'bold',
   },
 });

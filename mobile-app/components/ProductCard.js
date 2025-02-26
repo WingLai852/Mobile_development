@@ -1,15 +1,16 @@
 import React from 'react';
 import { View, Text, Image, Button, StyleSheet } from 'react-native';
 
-const ProductCard = ({ image, name, description, navigation }) => {
+const ProductCard = ({ image, name, price, description, navigation }) => {
 
   return (
     <View style={styles.card}>
       <Image source={image} style={styles.image} />
       <View style={styles.infoContainer}>
         <Text style={styles.name}>{name}</Text>
+        <Text style={styles.price}>{price}</Text>
         <Text style={styles.description}>{description}</Text>
-        <Button title="Bekijk Product" onPress={()=> navigation.navigate("Details")} />
+        <Button title="Bekijk Product" onPress={()=> navigation.navigate("Details",{name, description, price, image})} />
       </View>
     </View>
   );
@@ -40,7 +41,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginTop: 10,
   },
-  description: {
+  price: {
     fontSize: 20,
     color: '#black',
     marginTop: 5,

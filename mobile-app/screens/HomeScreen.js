@@ -15,27 +15,30 @@ const HomeScreen = ({ navigation }) => {
       <View style={styles.Productcontainer}>
         <ProductCard
           img={require('../assets/snowboard1.jpg')}
-          name="Burton Custom Snowboard"
-          description="299,99 euro"
+          name="Burton Custom Snowboard!"
+          description="Dit is een snowboard"
+          price="299,99 euro"
+          navigation={navigation}
+        />
+        <ProductCard
+          img={require('../assets/snowboard1.jpg')}
+          name="Burton Custom Snowboard ghost"
+          description="Dit is een snowboard"
+          price="500 Euro"
           navigation={navigation}
         />
         <ProductCard
           img={require('../assets/snowboard1.jpg')}
           name="Burton Custom Snowboard"
-          description="500 euro"
-          navigation={navigation}
+          description="Dit is een snowboard"
+          price="600 euro"
+         navigation={navigation}
         />
         <ProductCard
           img={require('../assets/snowboard1.jpg')}
           name="Burton Custom Snowboard"
-          description="500 euro"
-          navigation={navigation}
-        />
-
-        <ProductCard
-          img={require('../assets/snowboard1.jpg')}
-          name="Burton Custom Snowboard"
-          description="500 euro"
+          price="500 euro"
+          description="Dit is een snowboard"
           navigation={navigation}
         />
       </View>
