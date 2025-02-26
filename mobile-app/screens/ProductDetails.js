@@ -26,7 +26,7 @@ const SnowBoardProductDetails = ({ route }) => {
         <View style={styles.overlay}>
           <Text style={styles.name}>{name}</Text>
           <Text style={styles.description}>{description}</Text>
-          <Text style={styles.price}>{Number(price) * quantity}</Text>
+          <Text style={styles.price}>{(price * quantity).toFixed(2)} euro</Text>
           <Image
             source={require('../assets/SnowBoardbg.png')}
             style={styles.snowboardImage}

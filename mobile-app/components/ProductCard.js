@@ -10,7 +10,7 @@ const ProductCard = ({ image, name, price, description, navigation }) => {
         <Text style={styles.name}>{name}</Text>
         <Text style={styles.price}>{price}</Text>
         <Text style={styles.description}>{description}</Text>
-        <Button title="Bekijk Product" onPress={()=> navigation.navigate("Details",{name, description, price, image})} />
+        <Button title="Bekijk Product" onPress={()=> navigation.navigate("Details",{name, description, price: parseFloat(price), image})} />
       </View>
     </View>
   );
